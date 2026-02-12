@@ -1,7 +1,6 @@
 // js/api.js
 const URL_JSON = './data/viajes.json';
 
-// Función asíncrona para traer los datos (Cumple requisito Fetch + Async/Await)
 async function obtenerViajes() {
     try {
         const response = await fetch(URL_JSON);

@@ -3,26 +3,23 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 actualizarContador();
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. OBTENER DATOS (Simulado o API)
+
     const datos = await obtenerViajes();
     
     if (datos) {
         datosGlobales.nacionales = datos.paquetesNacionales;
         datosGlobales.internacionales = datos.destinosInternacionales;
 
-        // 2. RENDERIZAR TODO AL INICIO
         renderizarNacionales(datosGlobales.nacionales);
         renderizarInternacionales(datosGlobales.internacionales);
     } else {
         Toastify({ text: "Error cargando datos", style: { background: "red" } }).showToast();
     }
 
-    // 3. ACTIVAR BUSCADOR
     const input = document.getElementById('input-buscador');
     if(input) input.addEventListener('input', (e) => filtrarViajes(e.target.value));
 });
 
-// --- FILTRADO ---
 function filtrarViajes(texto) {
     const busqueda = texto.toLowerCase().trim();
     const secNac = document.getElementById('nacionales');
@@ -32,7 +29,6 @@ function filtrarViajes(texto) {
     const nacFiltrados = datosGlobales.nacionales.filter(p => p.destino.toLowerCase().includes(busqueda));
     const intFiltrados = datosGlobales.internacionales.filter(d => d.ciudad.toLowerCase().includes(busqueda) || d.pais.toLowerCase().includes(busqueda));
 
-    // Mostrar/Ocultar Nacionales
     if(nacFiltrados.length > 0) {
         secNac.style.display = 'block';
         renderizarNacionales(nacFiltrados);
@@ -40,7 +36,6 @@ function filtrarViajes(texto) {
         secNac.style.display = 'none';
     }
 
-    // Mostrar/Ocultar Internacionales
     if(intFiltrados.length > 0) {
         secInt.style.display = 'block';
         renderizarInternacionales(intFiltrados);
@@ -48,7 +43,6 @@ function filtrarViajes(texto) {
         secInt.style.display = 'none';
     }
 
-    // Mostrar Mensaje si todo está vacío
     if(nacFiltrados.length === 0 && intFiltrados.length === 0) {
         msg.style.display = 'block';
     } else {
@@ -56,7 +50,6 @@ function filtrarViajes(texto) {
     }
 }
 
-// --- RENDERIZADORES ---
 function renderizarNacionales(lista) {
     const cont = document.getElementById('container-nacionales');
     cont.innerHTML = '';
@@ -103,7 +96,7 @@ function renderizarInternacionales(lista) {
     });
 }
 
-// --- CARRITO LOGICA ---
+//CARRITO 
 window.agregarNacional = (id, dest, precio, img) => {
     const seg = document.getElementById(`seguro-${id}`);
     let final = precio;

@@ -1,6 +1,4 @@
-/* =========================================
-   1. VARIABLES Y RESET
-   ========================================= */
+
 :root {
     --bg-color: #F8FAFC;
     --card-bg: #ffffff;
@@ -21,9 +19,7 @@ body {
     display: flex; flex-direction: column; min-height: 100vh;
 }
 
-/* =========================================
-   2. HEADER
-   ========================================= */
+
 header {
     background: var(--white);
     padding: 1.2rem 5%;
@@ -46,9 +42,7 @@ nav a:hover { color: var(--accent-color); }
 
 #contador-carrito { background: var(--white); color: var(--primary-color); font-size: 0.75rem; font-weight: 800; padding: 2px 6px; border-radius: 50%; }
 
-/* =========================================
-   3. HERO Y BUSCADOR
-   ========================================= */
+
 .hero-intro {
     background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), 
                 url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2021&q=80');
@@ -70,13 +64,11 @@ nav a:hover { color: var(--accent-color); }
     box-shadow: 0 15px 35px rgba(0,0,0,0.15); color: var(--text-dark);
 }
 
-/* =========================================
-   4. BENEFICIOS
-   ========================================= */
+
 .benefits-section {
     display: flex;
     justify-content: center;
-    gap: 80px; /* Más espacio entre items */
+    gap: 80px; 
     padding: 0 20px;
     margin-bottom: 5rem;
     flex-wrap: wrap;
@@ -93,10 +85,10 @@ nav a:hover { color: var(--accent-color); }
     font-weight: 700;
     margin-bottom: 10px;
     
-    /* ESTILO SUBRAYADO */
-    border-bottom: 2px solid var(--accent-color); /* Línea azul */
-    display: inline-block; /* Para que la línea mida lo mismo que el texto */
-    padding-bottom: 5px;   /* Espacio entre texto y línea */
+
+    border-bottom: 2px solid var(--accent-color); 
+    display: inline-block; 
+    padding-bottom: 5px;   
 }
 
 .benefit-item p {
