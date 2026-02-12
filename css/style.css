@@ -180,7 +180,7 @@ footer {
     
     .main-carrito { flex-direction: column; }
     
-    /* En el carrito, que las tablas o grids se adapten */
+
     .carrito-productos, .carrito-resumen { width: 100%; }
     
     .grid-cards { grid-template-columns: 1fr; } 
