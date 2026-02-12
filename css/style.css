@@ -2,8 +2,8 @@
 :root {
     --bg-color: #F8FAFC;
     --card-bg: #ffffff;
-    --primary-color: #0f172a;   /* Azul oscuro */
-    --accent-color: #3b82f6;    /* Azul brillante */
+    --primary-color: #0f172a;   
+    --accent-color: #3b82f6;    
     --text-dark: #1e293b;
     --text-light: #64748b;
     --danger: #ef4444;
@@ -97,12 +97,9 @@ nav a:hover { color: var(--accent-color); }
     line-height: 1.4;
 }
 
-/* =========================================
-   5. SECCIONES Y CARDS (GRID FIX)
-   ========================================= */
+
 main { max-width: 1200px; margin: 0 auto; padding: 0 20px; flex: 1; width: 100%; }
 
-/* Separación clara entre secciones */
 section { 
     margin-bottom: 5rem; 
     padding-top: 2rem;
@@ -113,11 +110,10 @@ section:first-child { border-top: none; }
 h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem; font-weight: 800; }
 .subtitle { color: var(--text-light); margin-bottom: 2.5rem; font-size: 1.1rem; }
 
-/* --- CORRECCIÓN DE LA GRILLA --- */
+
 .grid-cards {
     display: grid;
-    /* Esto asegura que entren varias cards por fila. 
-       minmax(280px, 1fr) significa: mínimo 280px de ancho, si sobra espacio, repártelo. */
+  
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 30px;
     width: 100%;
@@ -148,9 +144,7 @@ h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem; font-w
 }
 .inputs-container input:focus { border-color: var(--primary-color); background: white; }
 
-/* =========================================
-   6. FOOTER
-   ========================================= */
+
 footer {
     background-color: var(--primary-color); color: white; padding: 60px 20px; margin-top: 80px; text-align: center;
 }
@@ -158,9 +152,7 @@ footer {
 .footer-links a { color: #94a3b8; text-decoration: none; margin: 0 15px; } 
 .footer-links a:hover { color: white; }
 
-/* =========================================
-   7. CARRITO (CSS)
-   ========================================= */
+
 .main-carrito { display: flex; gap: 40px; margin-top: 4rem; align-items: flex-start; }
 .carrito-productos, .carrito-resumen { background: var(--white); border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; }
 .carrito-productos { flex: 2; }
@@ -176,8 +168,34 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 15px; text-align: center; }
+
+    header { 
+        flex-direction: row; 
+        justify-content: space-between; 
+        gap: 0; 
+        text-align: left;
+    }
+
     .hero-intro h1 { font-size: 2.5rem; }
+    
     .main-carrito { flex-direction: column; }
-    .grid-cards { grid-template-columns: 1fr; } /* Solo en móvil se apilan */
+    
+    /* En el carrito, que las tablas o grids se adapten */
+    .carrito-productos, .carrito-resumen { width: 100%; }
+    
+    .grid-cards { grid-template-columns: 1fr; } 
+    
+    #tabla-carrito thead { display: none; }
+    
+    #tabla-carrito tr { 
+        display: flex; 
+        flex-direction: column; 
+        text-align: center; 
+        border-bottom: 1px solid #eee; 
+        padding: 15px 0; 
+    }
+    
+    #tabla-carrito td { border: none; padding: 5px; }
+    
+    .img-mini { float: none; margin: 0 auto 10px; display: block; }
 }
