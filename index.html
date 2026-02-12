@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoViajes - Design Your Journey</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-go">GO.</a>
+        <nav>
+            <a href="carrito.html" class="btn-carrito">
+                Tu Carrito <span id="contador-carrito">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="hero-intro">
+        <h1>Explora el mundo<br>a tu manera.</h1>
+        <p>Los mejores destinos nacionales e internacionales en un solo lugar.</p>
+    </div>
+
+    <div class="search-wrapper">
+        <input type="text" id="input-buscador" placeholder="  Buscar destino (Ej: Mendoza, París...)">
+    </div>
+
+    <div class="benefits-section">
+        <div class="benefit-item">
+            <h4>Calidad Premium</h4>
+            <p>Hoteles seleccionados y verificados.</p>
+        </div>
+        <div class="benefit-item">
+            <h4>Financiación</h4>
+            <p>Paga en cuotas fijas sin interés.</p>
+        </div>
+        <div class="benefit-item">
+            <h4>Soporte 24/7</h4>
+            <p>Acompañamiento en todo tu viaje.</p>
+        </div>
+    </div>
+
+    <div id="mensaje-sin-resultados" style="display: none; text-align: center; margin-top: 50px;">
+        <h3>No encontramos coincidencias.</h3>
+    </div>
+
+    <main>
+        <section id="nacionales">
+            <h2>🇦🇷 Paquetes Nacionales</h2>
+            <p class="subtitle">Escapadas increíbles por Argentina.</p>
+            
+            <div id="container-nacionales" class="grid-cards">
+                </div>
+        </section>
+
+        <section id="internacionales">
+            <h2> Destinos Europa</h2>
+            <p class="subtitle">Cotiza tu viaje soñado al viejo continente.</p>
+            
+            <div id="container-internacionales" class="grid-cards">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>GO.</h2>
+            <p style="opacity: 0.7;">Agencia de Viajes Legajo #1234</p>
+            <div class="footer-links">
+                <a href="#">Términos</a>
+                <a href="#">Contacto</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">© 2024 GoViajes S.A.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

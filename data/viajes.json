@@ -1,0 +1,70 @@
+{
+  "paquetesNacionales": [
+    {
+      "id": "nac1",
+      "destino": "Tafí del Valle",
+      "dias": 3,
+      "precioTotal": 150000,
+      "imagen": "./media/tafi.jfif",
+      "descripcion": "Escapada norteña. Incluye aéreos, hotel boutique y excursiones."
+    },
+    {
+      "id": "nac2",
+      "destino": "Bariloche",
+      "dias": 5,
+      "precioTotal": 280000,
+      "imagen": "./media/bariloche.jfif",
+      "descripcion": "Patagonia soñada. Incluye aéreos, Hotel Vista Lago y Circuito Chico."
+    },
+    {
+      "id": "nac3",
+      "destino": "Mar del Plata",
+      "dias": 7,
+      "precioTotal": 200000,
+      "imagen": "./media/mardel.jfif",
+      "descripcion": "La Feliz. Incluye aéreos, hotel céntrico y carpa en balneario."
+    }
+  ],
+  "destinosInternacionales": [
+    {
+      "id": "int1",
+      "ciudad": "Venecia",
+      "pais": "Italia",
+      "precioVuelo": 50000,
+      "precioHotelNoche": 30000,
+      "imagen": "./media/venecia.jfif"
+    },
+    {
+      "id": "int2",
+      "ciudad": "París",
+      "pais": "Francia",
+      "precioVuelo": 50000,
+      "precioHotelNoche": 28000,
+      "imagen": "./media/paris.jfif"
+    },
+    {
+      "id": "int3",
+      "ciudad": "Madrid",
+      "pais": "España",
+      "precioVuelo": 45000,
+      "precioHotelNoche": 33000,
+      "imagen": "./media/madrid.jfif"
+    },
+    {
+      "id": "int4",
+      "ciudad": "Londres",
+      "pais": "UK",
+      "precioVuelo": 65000,
+      "precioHotelNoche": 35000,
+      "imagen": "./media/londres.jfif"
+    },
+    {
+      "id": "int5",
+      "ciudad": "Roma",
+      "pais": "Italia",
+      "precioVuelo": 50000,
+      "precioHotelNoche": 26000,
+      "imagen": "./media/roma.jfif"
+    }
+  ]
+}

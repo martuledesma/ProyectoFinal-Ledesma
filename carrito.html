@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito - GoViajes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-go">GO.</a>
+        <nav>
+            <a href="index.html" style="font-size: 0.9rem; font-weight: 500;">Volver a la tienda</a>
+        </nav>
+    </header>
+
+    <main class="main-carrito">
+        
+        <section class="carrito-productos">
+            <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--primary-color);">Tu Selección</h2>
+            <table id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th width="50%">Experiencia</th>
+                        <th width="20%">Detalle</th>
+                        <th width="20%">Valor</th>
+                        <th width="10%"></th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body">
+                    </tbody>
+            </table>
+            
+            <div id="mensaje-vacio" style="display:none; text-align: center; padding: 60px;">
+                <h3 style="color: #94a3b8; font-weight: 400; margin-bottom: 10px;">Tu carrito está vacío.</h3>
+                <a href="index.html" class="btn" style="width: auto; display: inline-block; padding: 10px 30px;">Explorar Destinos</a>
+            </div>
+        </section>
+
+        <aside class="carrito-resumen" id="panel-resumen">
+            <h3 style="margin-bottom: 25px; font-size: 1.2rem;">Resumen de Reserva</h3>
+            <div class="resumen-fila">
+                <span>Subtotal</span>
+                <span id="subtotal">$0</span>
+            </div>
+            <div class="resumen-fila">
+                <span>Cargos de Gestión</span>
+                <span style="color: var(--accent-color); font-weight: 600;">Bonificado</span>
+            </div>
+            <div class="resumen-fila">
+                <span>Impuestos</span>
+                <span>Incluidos</span>
+            </div>
+            
+            <div class="resumen-total">
+                <span>Total Final</span>
+                <span id="total-final">$0</span>
+            </div>
+            
+            <button id="btn-finalizar" class="btn-checkout">INICIAR PAGO SEGURO</button>
+            <button onclick="vaciarCarrito()" style="background:none; border:none; width:100%; margin-top:15px; text-decoration:underline; color:#94a3b8; cursor:pointer;">Vaciar carrito</button>
+        </aside>
+
+    </main>
+
+    <footer style="margin-top: auto;">
+        <p style="opacity: 0.5; font-size: 0.8rem;">Compra procesada con seguridad bancaria.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/cart.js"></script> 
+</body>
+</html>
